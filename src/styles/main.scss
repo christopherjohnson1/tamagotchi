@@ -1,5 +1,78 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url('https://fonts.googleapis.com/css?family=Bellota&display=swap');
+
+
+$lightBlue: #4DD7FA;
+$yellow: #FEF67F;
+$purple: #E692F8;
+$pink: #F06E9C;
+$lightGrey: #fafafa;
+$background: #bdbdbd;
+$nav: #444444;
+
+nav {
+    background-color: $nav;
+    padding: 20px;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
 
 body {
-    background-color: blue;
-};
+  background-color: $background;
+  font-family: 'Bellota', cursive;
+}
+
+#app {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+@mixin button-style($color){
+  background-color: darken($color , $amount: 15%);
+  border-color: black;
+  width: 40%;
+  margin: 5%;
+  padding: 5px;
+  :focus { outline: none;}
+}
+
+.quad {
+  width: 46%;
+  margin: 2%;
+  border-radius: 20px;
+  h2{
+    text-align: center;
+  }
+  div {
+    text-align: center;
+  }
+}
+
+#eat {
+  background-color: $lightBlue;
+  button{
+    @include button-style($lightGrey)
+  }
+}
+
+#play {
+  background-color: $yellow;
+  button{
+    @include button-style($lightGrey)
+  }
+}
+
+#fight {
+  background-color: $purple;
+  button{
+    @include button-style($lightGrey)
+  }
+}
+
+#sleep {
+  background-color: $pink;
+  button{
+    @include button-style($lightGrey)
+  }
+}
