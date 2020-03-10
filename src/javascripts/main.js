@@ -1,8 +1,14 @@
 import '../styles/main.scss';
-import eat from './components/eat/eat';
+import eat from './components/eat';
+import play from './components/play';
+import fight from './components/fight';
+import sleep from './components/sleep';
 
 const init = () => {
-  eat.hi();
+  eat.eatQuadPrinter();
+  play.playQuadPrinter();
+  fight.fightQuadPrinter();
+  sleep.sleepQuadPrinter();
 };
 
 init();
